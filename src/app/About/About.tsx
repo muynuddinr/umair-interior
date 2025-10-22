@@ -2,8 +2,8 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Navbar from '@/app/Components/Navbar';
-import Footer from '@/app/Components/Footer';
+import Heroimage from '..//../../public/hero4.jpg'
+import img1 from '../../../public/study.jpg'
 
 const AboutPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -117,13 +117,12 @@ const AboutPage = () => {
 
   return (
     <>
-      <Navbar />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/about-hero.jpg"
+            src={Heroimage}
             alt="About Bright Edge Interiors"
             fill
             style={{ objectFit: 'cover' }}
@@ -219,7 +218,7 @@ const AboutPage = () => {
               }`}
             >
               <Image
-                src="/our-philosophy.jpg"
+                src={img1}
                 alt="Our Design Philosophy"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -415,7 +414,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <Footer />
 
       {/* Custom Animation Styles */}
       <style jsx>{`

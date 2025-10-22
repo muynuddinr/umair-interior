@@ -1,13 +1,36 @@
 // app/gallery/page.jsx
 'use client';
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 import Heroimage from '../../../public/hero3.jpg'
+import img1 from '../..//../public/theatre view 2.jpg'
+import img2 from '../../../public/theatre view interior.jpg'
+import img3 from '../../../public/tv 1.jpg'
+import img4 from '../../../public/view 3.jpg'
+import img5 from '../../../public/view 5.jpg'
+import img6 from '../../../public/vv night view.jpg'
+import img7 from '../../../public/vv view.jpg'
+import img8 from '../../../public/living hall view - Copy.jpg'
+import img9 from '../../../public/interior 2.jpg'
+
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  type: string;
+  description: string;
+  images: (string | StaticImageData)[];
+  year: string;
+  location: string;
+  features: string[];
+  materials: string[];
+  color: string;
+}
 
 const GalleryPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [viewMode, setViewMode] = useState('grid');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
@@ -22,7 +45,7 @@ const GalleryPage = () => {
       category: "residential",
       type: "Living Room",
       description: "Clean lines and neutral tones create a serene living space",
-      images: ["/gallery/project1-1.jpg", "/gallery/project1-2.jpg", "/gallery/project1-3.jpg"],
+      images: [img1],
       year: "2024",
       location: "Manhattan, NY",
       features: ["Minimalist Design", "Natural Light", "Open Layout"],
@@ -35,7 +58,7 @@ const GalleryPage = () => {
       category: "residential",
       type: "Kitchen",
       description: "High-end materials and smart storage solutions",
-      images: ["/gallery/project2-1.jpg", "/gallery/project2-2.jpg", "/gallery/project2-3.jpg"],
+      images: [img2],
       year: "2024",
       location: "Brooklyn, NY",
       features: ["Custom Cabinetry", "Island Design", "Smart Appliances"],
@@ -48,7 +71,7 @@ const GalleryPage = () => {
       category: "commercial",
       type: "Office",
       description: "Productive workspace with collaborative zones",
-      images: ["/gallery/project3-1.jpg", "/gallery/project3-2.jpg", "/gallery/project3-3.jpg"],
+      images: [img3],
       year: "2023",
       location: "Financial District, NY",
       features: ["Open Plan", "Meeting Rooms", "Breakout Areas"],
@@ -61,7 +84,7 @@ const GalleryPage = () => {
       category: "residential",
       type: "Bedroom",
       description: "Tranquil retreat with spa-like atmosphere",
-      images: ["/gallery/project4-1.jpg", "/gallery/project4-2.jpg", "/gallery/project4-3.jpg"],
+      images: [img4],
       year: "2024",
       location: "Upper East Side, NY",
       features: ["Walk-in Closet", "En-suite Bath", "Reading Nook"],
@@ -74,7 +97,7 @@ const GalleryPage = () => {
       category: "hospitality",
       type: "Lobby",
       description: "First impressions with sophisticated design",
-      images: ["/gallery/project5-1.jpg", "/gallery/project5-2.jpg", "/gallery/project5-3.jpg"],
+      images: [img5],
       year: "2023",
       location: "SoHo, NY",
       features: ["Reception Desk", "Lounge Area", "Art Installation"],
@@ -87,7 +110,7 @@ const GalleryPage = () => {
       category: "residential",
       type: "Dining Room",
       description: "Cozy yet sophisticated dining space",
-      images: ["/gallery/project6-1.jpg", "/gallery/project6-2.jpg", "/gallery/project6-3.jpg"],
+      images: [img6],
       year: "2024",
       location: "West Village, NY",
       features: ["Built-in Banquette", "Pendant Lighting", "Built-in Storage"],
@@ -100,7 +123,7 @@ const GalleryPage = () => {
       category: "residential",
       type: "Bathroom",
       description: "Spa-like bathroom with luxury finishes",
-      images: ["/gallery/project7-1.jpg", "/gallery/project7-2.jpg", "/gallery/project7-3.jpg"],
+      images: [img7],
       year: "2023",
       location: "Tribeca, NY",
       features: ["Freestanding Tub", "Double Vanity", "Steam Shower"],
@@ -113,7 +136,7 @@ const GalleryPage = () => {
       category: "retail",
       type: "Retail",
       description: "Engaging retail space that drives sales",
-      images: ["/gallery/project8-1.jpg", "/gallery/project8-2.jpg", "/gallery/project8-3.jpg"],
+      images: [img8],
       year: "2023",
       location: "Madison Avenue, NY",
       features: ["Display Walls", "Fitting Rooms", "Cash Wrap"],
@@ -126,7 +149,7 @@ const GalleryPage = () => {
       category: "residential",
       type: "Office",
       description: "Productive home workspace with style",
-      images: ["/gallery/project9-1.jpg", "/gallery/project9-2.jpg", "/gallery/project9-3.jpg"],
+      images: [img9],
       year: "2024",
       location: "Chelsea, NY",
       features: ["Built-in Desk", "Storage Solutions", "Good Lighting"],

@@ -5,7 +5,7 @@ const Footer = () => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     // Handle newsletter subscription
     if (email) {

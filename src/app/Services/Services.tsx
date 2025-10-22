@@ -3,10 +3,15 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Hero from '../../../public/hero2.jpg'
+import img1 from '../../../public/MASTER Bedroom front view. - Copy.jpg'
+import img2 from '../../../public/MASTERE Bedroom  wardrobe view. - Copy.jpg'
+import img3 from '../../../public/WhatsApp Image 2025-06-12 at 10.54.38 AM.jpeg'
+import img4 from '../../../public/WhatsApp Image 2025-06-12 at 10.54.39 AM (1).jpeg'
+import img5 from '../../../public/sitting area interior view.jpg'
 
 const ServicesPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [activeService, setActiveService] = useState(null);
+  const [activeService, setActiveService] = useState<number | null>(null);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -27,7 +32,7 @@ const ServicesPage = () => {
         "Project management & coordination"
       ],
       deliverables: ["Design Concept", "3D Renderings", "Technical Drawings", "Material Samples", "Shopping List"],
-      image: "/full-design.jpg",
+      image: img1,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -49,7 +54,7 @@ const ServicesPage = () => {
         "Organization solutions"
       ],
       deliverables: ["Mood Board", "Layout Plan", "Color Scheme", "Shopping Guide", "Styling Instructions"],
-      image: "/room-makeover.jpg",
+      image: img2,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -71,7 +76,7 @@ const ServicesPage = () => {
         "Implementation guidance"
       ],
       deliverables: ["Design Board", "Floor Plan", "Shopping List", "Style Guide", "Email Support"],
-      image: "/e-design.jpg",
+      image: img3,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -93,7 +98,7 @@ const ServicesPage = () => {
         "Design direction & next steps"
       ],
       deliverables: ["Design Assessment", "Recommendations", "Resource List", "Action Plan"],
-      image: "/consultation.jpg",
+      image: img4,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -134,18 +139,22 @@ const ServicesPage = () => {
     {
       title: "Residential",
       description: "Creating homes that reflect your personality and enhance your daily life",
+      icon: "🏠"
     },
     {
       title: "Commercial",
       description: "Designing spaces that inspire productivity and leave lasting impressions",
+      icon: "🏢"
     },
     {
       title: "Hospitality",
       description: "Crafting memorable experiences through thoughtful interior environments",
+      icon: "🏨"
     },
     {
       title: "Retail",
       description: "Designing spaces that engage customers and drive business success",
+      icon: "🏪"
     }
   ];
 
@@ -438,7 +447,7 @@ const ServicesPage = () => {
               }`}
             >
               <Image
-                src="/why-choose-us.jpg"
+                src={img5}
                 alt="Interior Design Studio"
                 fill
                 style={{ objectFit: 'cover' }}

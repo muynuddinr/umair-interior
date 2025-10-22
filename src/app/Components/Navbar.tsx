@@ -21,7 +21,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/Services' },
     { name: 'About', href: '/About' },
-    { name: 'Gallery', href: '/gallery' },
+    { name: 'Gallery', href: '/Gallery' },
   ];
 
   return (
@@ -98,9 +98,12 @@ const Navbar = () => {
             </div>
             
             {/* CTA Button */}
-            <button className="px-6 py-2.5 bg-stone-900 text-white text-sm font-light tracking-wider rounded-sm hover:bg-stone-800 transform transition-all duration-300 hover:scale-105">
+       <Link 
+              href="/Contact"
+              className="px-6 py-2.5 bg-stone-900 text-white text-sm font-light tracking-wider rounded-sm hover:bg-stone-800 transform transition-all duration-300 hover:scale-105"
+            >
               CONTACT
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
