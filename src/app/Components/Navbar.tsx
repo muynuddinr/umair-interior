@@ -21,9 +21,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/Services' },
     { name: 'About', href: '/About' },
-    { name: 'Journal', href: '/Journal' },
-     { name: 'Gallery', href: '/Gallery' },
-    { name: 'Contact', href: '/Contact' },
+    { name: 'Gallery', href: '/gallery' },
   ];
 
   return (
@@ -96,20 +94,12 @@ const Navbar = () => {
                 </svg>
               </button>
               
-              <button className={`p-2 rounded-full transition-colors duration-300 ${
-                scrolled ? 'hover:bg-stone-100' : 'hover:bg-white/20'
-              }`}>
-                <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-colors ${
-                  scrolled ? 'text-stone-700' : 'text-white'
-                }`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </button>
+
             </div>
             
             {/* CTA Button */}
             <button className="px-6 py-2.5 bg-stone-900 text-white text-sm font-light tracking-wider rounded-sm hover:bg-stone-800 transform transition-all duration-300 hover:scale-105">
-              CONSULTATION
+              CONTACT
             </button>
           </div>
 
@@ -148,7 +138,7 @@ const Navbar = () => {
             <div className="relative">
               <input 
                 type="text" 
-                placeholder="Search for Gallery, services..."
+                placeholder="Search for projects, services..."
                 className="w-full px-4 py-3 pr-12 bg-stone-50 border border-stone-200 rounded-sm focus:outline-none focus:border-stone-400 transition-colors duration-300"
               />
               <button className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1">
@@ -192,13 +182,13 @@ const Navbar = () => {
               
               <button className="p-2 rounded-full bg-stone-100 hover:bg-stone-200 transition-colors duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-stone-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17a1 1 0 01-1 1H4a1 1 0 01-1-1v-2.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                 </svg>
               </button>
             </div>
             <div className="px-4 pt-2">
               <button className="w-full px-6 py-3 bg-stone-900 text-white text-sm font-light tracking-wider rounded-sm hover:bg-stone-800 transition-colors duration-300">
-                CONSULTATION
+                CONTACT
               </button>
             </div>
             <div className="px-4 pt-4 pb-2">
