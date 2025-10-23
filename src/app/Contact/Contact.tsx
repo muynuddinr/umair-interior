@@ -11,8 +11,6 @@ const ContactPage = () => {
     email: '',
     phone: '',
     projectType: '',
-    budget: '',
-    timeline: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -44,8 +42,6 @@ const ContactPage = () => {
         email: '',
         phone: '',
         projectType: '',
-        budget: '',
-        timeline: '',
         message: ''
       });
     }, 3000);
@@ -269,43 +265,6 @@ const ContactPage = () => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-light tracking-wider text-stone-700 mb-2">
-                  Budget Range
-                </label>
-                <select
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-sm focus:outline-none focus:border-stone-400 focus:ring-1 focus:ring-stone-400 transition-colors duration-300"
-                >
-                  <option value="">Select budget range</option>
-                  <option value="under-25k">Under $25,000</option>
-                  <option value="25k-50k">$25,000 - $50,000</option>
-                  <option value="50k-100k">$50,000 - $100,000</option>
-                  <option value="100k-250k">$100,000 - $250,000</option>
-                  <option value="over-250k">Over $250,000</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-light tracking-wider text-stone-700 mb-2">
-                  Timeline
-                </label>
-                <select
-                  name="timeline"
-                  value={formData.timeline}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-sm focus:outline-none focus:border-stone-400 focus:ring-1 focus:ring-stone-400 transition-colors duration-300"
-                >
-                  <option value="">Select timeline</option>
-                  <option value="asap">ASAP</option>
-                  <option value="1-3-months">1-3 months</option>
-                  <option value="3-6-months">3-6 months</option>
-                  <option value="6-months-plus">6+ months</option>
-                </select>
-              </div>
-            </div>
 
             <div>
               <label className="block text-sm font-light tracking-wider text-stone-700 mb-2">
